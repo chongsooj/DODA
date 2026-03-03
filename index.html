@@ -3,826 +3,348 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>두다(DODA) — 사회적경제 조직을 위한 업무 플랫폼, 평생 무료 협업기업 모집</title>
+<title>두다(DODA) — 평생 무료 협업기업 모집</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&family=Noto+Serif+KR:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&family=Noto+Serif+KR:wght@600;700&display=swap');
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#e8edf2; font-family:'Noto Sans KR',sans-serif; -webkit-font-smoothing:antialiased; color:#1c2b3a; }
+.wrap { max-width:640px; margin:32px auto; background:#fff; border-radius:4px; overflow:hidden; box-shadow:0 2px 24px rgba(0,0,0,.10); }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+/* NOTICE */
+.notice { background:#1a4d6e; padding:10px 40px; text-align:center; font-size:12.5px; color:rgba(255,255,255,.85); }
+.notice strong { color:#7ed9a8; }
 
-  body {
-    background: #e8edf2;
-    font-family: 'Noto Sans KR', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    color: #1c2b3a;
-  }
+/* HEADER */
+.hd { background:#fff; padding:44px 48px 36px; border-bottom:1px solid #e8edf2; }
+.sender { display:flex; align-items:center; gap:12px; margin-bottom:32px; }
+.logo { width:40px; height:40px; background:#1a4d6e; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:15px; font-weight:800; color:#fff; flex-shrink:0; }
+.sname { font-size:13px; font-weight:700; color:#1c2b3a; }
+.ssub { font-size:11.5px; color:#8a9aaa; margin-top:1px; }
+.eyebrow { font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#2a7a52; margin-bottom:14px; }
+.hd h1 { font-family:'Noto Serif KR',serif; font-size:30px; font-weight:700; color:#0e1f30; line-height:1.35; margin-bottom:18px; }
+.hd h1 .ac { color:#1a6e46; border-bottom:3px solid #2ab06a; padding-bottom:2px; }
+.hdesc { font-size:14.5px; color:#4a5e70; line-height:1.8; }
 
-  .email-wrapper {
-    max-width: 640px;
-    margin: 32px auto;
-    background: #ffffff;
-    border-radius: 4px;
-    overflow: hidden;
-    box-shadow: 0 2px 24px rgba(0,0,0,0.10);
-  }
+/* SECTION */
+.sec { padding:36px 48px; }
+.sec+.sec { border-top:1px solid #edf1f5; }
+.slabel { font-size:10.5px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#8a9aaa; margin-bottom:20px; }
 
-  /* ── TOP NOTICE BAR ── */
-  .notice-bar {
-    background: #1a4d6e;
-    padding: 10px 40px;
-    text-align: center;
-    font-size: 12.5px;
-    color: rgba(255,255,255,0.85);
-    letter-spacing: 0.2px;
-  }
-  .notice-bar strong {
-    color: #7ed9a8;
-    font-weight: 700;
-  }
+/* LETTER */
+.letter { font-size:14.5px; color:#334455; line-height:1.9; }
+.letter p+p { margin-top:16px; }
+.letter strong { color:#0e1f30; font-weight:700; }
+.embox { background:#f0faf5; border-left:3px solid #2ab06a; padding:14px 18px; border-radius:0 8px 8px 0; margin:20px 0; font-size:14px; color:#1a3a28; font-weight:500; line-height:1.75; }
 
-  /* ── HEADER ── */
-  .header {
-    background: #ffffff;
-    padding: 44px 48px 36px;
-    border-bottom: 1px solid #e8edf2;
-  }
-  .sender-info {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 32px;
-  }
-  .sender-logo {
-    width: 40px; height: 40px;
-    background: #1a4d6e;
-    border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 16px;
-    font-weight: 800;
-    color: #ffffff;
-    letter-spacing: -0.5px;
-    flex-shrink: 0;
-  }
-  .sender-name {
-    font-size: 13px;
-    font-weight: 700;
-    color: #1c2b3a;
-  }
-  .sender-sub {
-    font-size: 11.5px;
-    color: #8a9aaa;
-    margin-top: 1px;
-  }
+/* COST */
+.costhero { background:#f4f9ff; border:1.5px solid #c8dcea; border-radius:12px; padding:28px 32px; }
+.costtitle { font-size:13px; font-weight:700; color:#1a4d6e; margin-bottom:20px; }
+.costrow { display:flex; gap:16px; align-items:stretch; }
+.ccol { flex:1; border-radius:10px; padding:20px 18px; }
+.ccol.bef { background:#fff; border:1px solid #e0e8ee; }
+.ccol.aft { background:#1a4d6e; }
+.cclabel { font-size:10.5px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; margin-bottom:12px; }
+.ccol.bef .cclabel { color:#8a9aaa; }
+.ccol.aft .cclabel { color:#7ed9a8; }
+.ci { display:flex; justify-content:space-between; font-size:12.5px; padding:5px 0; border-bottom:1px dashed #e8edf2; }
+.ccol.bef .ci { color:#556677; }
+.ccol.aft .ci { color:rgba(255,255,255,.75); border-color:rgba(255,255,255,.1); }
+.ci:last-child { border-bottom:none; }
+.cp { font-weight:600; }
+.ccol.bef .cp { color:#c04040; }
+.ccol.aft .cp { color:#7ed9a8; }
+.ctotal { margin-top:14px; padding-top:12px; border-top:1.5px solid; display:flex; justify-content:space-between; font-size:15px; font-weight:800; }
+.ccol.bef .ctotal { border-color:#d0dae4; color:#c04040; }
+.ccol.aft .ctotal { border-color:rgba(255,255,255,.2); color:#fff; }
+.cvs { display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; color:#8a9aaa; flex-shrink:0; width:36px; }
+.csave { margin-top:16px; text-align:center; font-size:13px; color:#1a4d6e; font-weight:600; }
+.csave span { background:#d6f0e4; color:#1a6e46; padding:4px 14px; border-radius:100px; font-size:12.5px; font-weight:700; }
 
-  .header-eyebrow {
-    font-size: 11.5px;
-    font-weight: 700;
-    letter-spacing: 1.8px;
-    text-transform: uppercase;
-    color: #2a7a52;
-    margin-bottom: 14px;
-  }
-  .header h1 {
-    font-family: 'Noto Serif KR', serif;
-    font-size: 30px;
-    font-weight: 700;
-    color: #0e1f30;
-    line-height: 1.35;
-    margin-bottom: 18px;
-  }
-  .header h1 .accent {
-    color: #1a6e46;
-    border-bottom: 3px solid #2ab06a;
-    padding-bottom: 2px;
-  }
-  .header-desc {
-    font-size: 14.5px;
-    color: #4a5e70;
-    line-height: 1.8;
-  }
+/* BENEFITS */
+.blist { display:flex; flex-direction:column; border:1px solid #e0e8ee; border-radius:10px; overflow:hidden; }
+.brow { display:flex; align-items:flex-start; padding:18px 22px; gap:16px; border-bottom:1px solid #edf1f5; background:#fff; }
+.brow:last-child { border-bottom:none; }
+.brow.hi { background:#f0fdf6; }
+.bnum { width:26px; height:26px; background:#1a4d6e; color:#fff; border-radius:50%; font-size:11.5px; font-weight:800; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px; }
+.brow.hi .bnum { background:#2a7a52; }
+.btxt h4 { font-size:13.5px; font-weight:700; color:#0e1f30; margin-bottom:4px; }
+.btxt p { font-size:12.5px; color:#556677; line-height:1.7; }
+.btxt p strong { color:#1a4d6e; font-weight:700; }
+.tfree { display:inline-block; background:#1a6e46; color:#fff; font-size:10px; font-weight:800; padding:2px 8px; border-radius:4px; margin-left:6px; letter-spacing:.5px; vertical-align:middle; }
 
-  /* ── DIVIDER ── */
-  .divider {
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #d0dae4, transparent);
-    margin: 0;
-  }
+/* FEATURES */
+.featsec { background:#0e1f30; padding:36px 48px; }
+.featsec .slabel { color:rgba(255,255,255,.4); }
+.featsec h2 { font-family:'Noto Serif KR',serif; font-size:21px; font-weight:700; color:#fff; margin-bottom:6px; line-height:1.4; }
+.featsec .fsub { font-size:13px; color:rgba(255,255,255,.45); margin-bottom:26px; }
+.frows { display:flex; flex-direction:column; gap:12px; }
+.frow { display:flex; gap:14px; align-items:flex-start; padding:16px 18px; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08); border-radius:8px; }
+.ficon { font-size:18px; flex-shrink:0; margin-top:1px; }
+.ftxt h4 { font-size:13px; font-weight:700; color:#a8d8c0; margin-bottom:3px; }
+.ftxt p { font-size:12px; color:rgba(255,255,255,.5); line-height:1.65; }
 
-  /* ── SECTION ── */
-  .section {
-    padding: 36px 48px;
-  }
-  .section + .section {
-    border-top: 1px solid #edf1f5;
-  }
+/* SCARCITY */
+.scar { padding:28px 48px; background:#fffbf2; border-top:1px solid #fde8c0; border-bottom:1px solid #fde8c0; }
+.scartop { display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; }
+.scartitle { font-size:13px; font-weight:700; color:#7a4e00; }
+.scarcount { font-size:12px; font-weight:700; color:#c07000; }
+.pbg { background:#fde8c0; border-radius:100px; height:8px; overflow:hidden; margin-bottom:8px; }
+.pfill { background:linear-gradient(90deg,#f59e0b,#ea7c00); width:73%; height:100%; border-radius:100px; }
+.scarnote { font-size:12px; color:#9a6a00; line-height:1.6; }
 
-  .section-label {
-    font-size: 10.5px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #8a9aaa;
-    margin-bottom: 20px;
-  }
+/* CTA */
+.cta { padding:40px 48px; text-align:center; }
+.cta h3 { font-family:'Noto Serif KR',serif; font-size:21px; font-weight:700; color:#0e1f30; margin-bottom:10px; line-height:1.4; }
+.cta p { font-size:13.5px; color:#556677; margin-bottom:28px; line-height:1.75; }
+.cta p strong { color:#0e1f30; font-weight:700; }
+.ctabtn { display:inline-block; background:#1a4d6e; color:#fff; text-decoration:none; font-size:15px; font-weight:700; padding:17px 48px; border-radius:8px; box-shadow:0 4px 16px rgba(26,77,110,.28); }
+.ctaor { font-size:12.5px; color:#aab8c4; margin:18px 0 14px; }
+.contact-box { display:inline-flex; flex-direction:column; align-items:flex-start; gap:10px; background:#f7f9fb; border:1px solid #e0e8ee; border-radius:10px; padding:16px 24px; text-align:left; }
+.contact-row { font-size:13px; color:#445566; display:flex; align-items:center; gap:8px; }
+.contact-row a { color:#1a4d6e; font-weight:700; text-decoration:none; border-bottom:1px solid #a0bfd4; }
+.kakao-btn { display:inline-flex; align-items:center; gap:7px; background:#FEE500; color:#1a1a1a; text-decoration:none; font-size:13px; font-weight:700; padding:9px 18px; border-radius:7px; }
 
-  /* ── OPENING LETTER ── */
-  .letter-body {
-    font-size: 14.5px;
-    color: #334455;
-    line-height: 1.9;
-  }
-  .letter-body p + p {
-    margin-top: 16px;
-  }
-  .letter-body strong {
-    color: #0e1f30;
-    font-weight: 700;
-  }
-  .letter-body .em-text {
-    background: #f0faf5;
-    border-left: 3px solid #2ab06a;
-    padding: 14px 18px;
-    border-radius: 0 8px 8px 0;
-    margin: 20px 0;
-    font-size: 14px;
-    color: #1a3a28;
-    font-weight: 500;
-    line-height: 1.75;
-  }
+/* FORM */
+.formsec { background:#f7f9fb; padding:32px 48px; border-top:1px solid #e4ecf2; }
+.formsec h3 { font-size:14px; font-weight:700; color:#0e1f30; margin-bottom:6px; }
+.formnote { font-size:12.5px; color:#778899; margin-bottom:18px; line-height:1.6; }
+table.rf { width:100%; border-collapse:collapse; font-size:12.5px; border:1px solid #d8e4ee; border-radius:8px; overflow:hidden; }
+table.rf tr { border-bottom:1px solid #d8e4ee; }
+table.rf tr:last-child { border-bottom:none; }
+table.rf th { background:#edf2f7; color:#445566; font-weight:600; padding:11px 16px; text-align:left; width:34%; font-size:12px; vertical-align:top; }
+table.rf td { padding:11px 16px; background:#fff; color:#aabbcc; font-size:11.5px; vertical-align:top; line-height:1.9; }
+.fsubnote { text-align:center; margin-top:14px; font-size:12px; color:#8a9aaa; }
 
-  /* ── COST COMPARISON (HERO) ── */
-  .cost-hero {
-    background: #f4f9ff;
-    border: 1.5px solid #c8dcea;
-    border-radius: 12px;
-    padding: 28px 32px;
-    margin-bottom: 0;
-  }
-  .cost-hero-title {
-    font-size: 13px;
-    font-weight: 700;
-    color: #1a4d6e;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .cost-compare {
-    display: flex;
-    gap: 16px;
-    align-items: stretch;
-  }
-  .cost-col {
-    flex: 1;
-    border-radius: 10px;
-    padding: 20px 18px;
-  }
-  .cost-col.before {
-    background: #fff;
-    border: 1px solid #e0e8ee;
-  }
-  .cost-col.after {
-    background: #1a4d6e;
-  }
-  .cost-col-label {
-    font-size: 10.5px;
-    font-weight: 700;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-  }
-  .cost-col.before .cost-col-label { color: #8a9aaa; }
-  .cost-col.after .cost-col-label { color: #7ed9a8; }
+/* FOOTER */
+.ft { background:#0e1f30; padding:28px 48px; }
+.fttop { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:18px; padding-bottom:18px; border-bottom:1px solid rgba(255,255,255,.1); }
+.ftbrand { font-size:14px; font-weight:800; color:#fff; margin-bottom:4px; }
+.ftbrand span { color:#7ed9a8; }
+.ftbrandsub { font-size:11.5px; color:rgba(255,255,255,.4); }
+.ftcontact { text-align:right; font-size:12px; color:rgba(255,255,255,.5); line-height:2; }
+.ftcontact a { color:#7ed9a8; text-decoration:none; }
+.ftcontact .kakao-ft { display:inline-flex; align-items:center; gap:5px; background:#FEE500; color:#1a1a1a; padding:3px 10px; border-radius:4px; font-size:11px; font-weight:700; text-decoration:none; }
+.ftbot { font-size:11px; color:rgba(255,255,255,.28); line-height:1.7; text-align:center; }
 
-  .cost-item {
-    display: flex;
-    justify-content: space-between;
-    font-size: 12.5px;
-    padding: 5px 0;
-    border-bottom: 1px dashed #e8edf2;
-  }
-  .cost-col.before .cost-item { color: #556677; }
-  .cost-col.after .cost-item { color: rgba(255,255,255,0.75); border-color: rgba(255,255,255,0.1); }
-  .cost-item:last-child { border-bottom: none; }
-  .cost-item .price { font-weight: 600; }
-  .cost-col.before .price { color: #c04040; }
-  .cost-col.after .price { color: #7ed9a8; }
-
-  .cost-total {
-    margin-top: 14px;
-    padding-top: 12px;
-    border-top: 1.5px solid;
-    display: flex;
-    justify-content: space-between;
-    font-size: 15px;
-    font-weight: 800;
-  }
-  .cost-col.before .cost-total { border-color: #d0dae4; color: #c04040; }
-  .cost-col.after .cost-total { border-color: rgba(255,255,255,0.2); color: #ffffff; }
-
-  .cost-vs {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    font-weight: 700;
-    color: #8a9aaa;
-    flex-shrink: 0;
-    width: 36px;
-  }
-  .cost-savings-note {
-    margin-top: 16px;
-    text-align: center;
-    font-size: 13px;
-    color: #1a4d6e;
-    font-weight: 600;
-  }
-  .cost-savings-note span {
-    background: #d6f0e4;
-    color: #1a6e46;
-    padding: 4px 14px;
-    border-radius: 100px;
-    font-size: 12.5px;
-    font-weight: 700;
-  }
-
-  /* ── BENEFITS TABLE ── */
-  .benefit-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    border: 1px solid #e0e8ee;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  .benefit-row {
-    display: flex;
-    align-items: flex-start;
-    padding: 18px 22px;
-    gap: 16px;
-    border-bottom: 1px solid #edf1f5;
-    background: #fff;
-  }
-  .benefit-row:last-child { border-bottom: none; }
-  .benefit-row.highlighted {
-    background: #f0fdf6;
-  }
-  .benefit-num {
-    width: 26px; height: 26px;
-    background: #1a4d6e;
-    color: #fff;
-    border-radius: 50%;
-    font-size: 11.5px;
-    font-weight: 800;
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-    margin-top: 1px;
-  }
-  .benefit-row.highlighted .benefit-num {
-    background: #2a7a52;
-  }
-  .benefit-text h4 {
-    font-size: 13.5px;
-    font-weight: 700;
-    color: #0e1f30;
-    margin-bottom: 4px;
-  }
-  .benefit-text p {
-    font-size: 12.5px;
-    color: #556677;
-    line-height: 1.7;
-  }
-  .benefit-text p strong {
-    color: #1a4d6e;
-    font-weight: 700;
-  }
-  .tag-free {
-    display: inline-block;
-    background: #1a6e46;
-    color: #fff;
-    font-size: 10px;
-    font-weight: 800;
-    padding: 2px 8px;
-    border-radius: 4px;
-    margin-left: 6px;
-    letter-spacing: 0.5px;
-    vertical-align: middle;
-  }
-
-  /* ── FEATURE OVERVIEW ── */
-  .feature-section {
-    background: #0e1f30;
-    padding: 36px 48px;
-  }
-  .feature-section .section-label {
-    color: rgba(255,255,255,0.4);
-  }
-  .feature-section h2 {
-    font-family: 'Noto Serif KR', serif;
-    font-size: 21px;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 6px;
-    line-height: 1.4;
-  }
-  .feature-section .sub {
-    font-size: 13px;
-    color: rgba(255,255,255,0.45);
-    margin-bottom: 26px;
-  }
-  .feature-rows {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  .feature-row {
-    display: flex;
-    gap: 14px;
-    align-items: flex-start;
-    padding: 16px 18px;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 8px;
-  }
-  .feature-row-icon {
-    font-size: 18px;
-    flex-shrink: 0;
-    margin-top: 1px;
-  }
-  .feature-row-text h4 {
-    font-size: 13px;
-    font-weight: 700;
-    color: #a8d8c0;
-    margin-bottom: 3px;
-  }
-  .feature-row-text p {
-    font-size: 12px;
-    color: rgba(255,255,255,0.5);
-    line-height: 1.65;
-  }
-
-  /* ── SCARCITY ── */
-  .scarcity-section {
-    padding: 28px 48px;
-    background: #fffbf2;
-    border-top: 1px solid #fde8c0;
-    border-bottom: 1px solid #fde8c0;
-  }
-  .scarcity-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  .scarcity-title {
-    font-size: 13px;
-    font-weight: 700;
-    color: #7a4e00;
-  }
-  .scarcity-count {
-    font-size: 12px;
-    font-weight: 700;
-    color: #c07000;
-  }
-  .progress-bg {
-    background: #fde8c0;
-    border-radius: 100px;
-    height: 8px;
-    overflow: hidden;
-    margin-bottom: 8px;
-  }
-  .progress-fill {
-    background: linear-gradient(90deg, #f59e0b, #ea7c00);
-    width: 73%;
-    height: 100%;
-    border-radius: 100px;
-  }
-  .scarcity-note {
-    font-size: 12px;
-    color: #9a6a00;
-    line-height: 1.6;
-  }
-
-  /* ── CTA ── */
-  .cta-section {
-    padding: 40px 48px;
-    text-align: center;
-  }
-  .cta-section h3 {
-    font-family: 'Noto Serif KR', serif;
-    font-size: 21px;
-    font-weight: 700;
-    color: #0e1f30;
-    margin-bottom: 10px;
-    line-height: 1.4;
-  }
-  .cta-section p {
-    font-size: 13.5px;
-    color: #556677;
-    margin-bottom: 28px;
-    line-height: 1.75;
-  }
-  .cta-section p strong {
-    color: #0e1f30;
-    font-weight: 700;
-  }
-  .cta-primary {
-    display: inline-block;
-    background: #1a4d6e;
-    color: #ffffff !important;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 700;
-    padding: 17px 48px;
-    border-radius: 8px;
-    letter-spacing: 0.2px;
-    margin-bottom: 16px;
-    box-shadow: 0 4px 16px rgba(26,77,110,0.28);
-  }
-  .cta-or {
-    font-size: 12.5px;
-    color: #aab8c4;
-    margin: 12px 0 8px;
-  }
-  .cta-simple {
-    font-size: 13px;
-    color: #556677;
-    line-height: 1.7;
-  }
-  .cta-simple a {
-    color: #1a4d6e;
-    font-weight: 700;
-    text-decoration: none;
-    border-bottom: 1px solid #a0bfd4;
-  }
-
-  /* ── REPLY FORM ── */
-  .form-section {
-    background: #f7f9fb;
-    padding: 32px 48px;
-    border-top: 1px solid #e4ecf2;
-  }
-  .form-section h3 {
-    font-size: 14px;
-    font-weight: 700;
-    color: #0e1f30;
-    margin-bottom: 6px;
-  }
-  .form-section .form-note-top {
-    font-size: 12.5px;
-    color: #778899;
-    margin-bottom: 18px;
-    line-height: 1.6;
-  }
-  table.reply-form {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 12.5px;
-    border: 1px solid #d8e4ee;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  table.reply-form tr {
-    border-bottom: 1px solid #d8e4ee;
-  }
-  table.reply-form tr:last-child { border-bottom: none; }
-  table.reply-form th {
-    background: #edf2f7;
-    color: #445566;
-    font-weight: 600;
-    padding: 11px 16px;
-    text-align: left;
-    width: 34%;
-    font-size: 12px;
-    vertical-align: top;
-  }
-  table.reply-form td {
-    padding: 11px 16px;
-    background: #ffffff;
-    color: #aabbcc;
-    font-size: 11.5px;
-    vertical-align: top;
-    line-height: 1.9;
-  }
-  .form-submit-note {
-    text-align: center;
-    margin-top: 14px;
-    font-size: 12px;
-    color: #8a9aaa;
-  }
-
-  /* ── FOOTER ── */
-  .footer {
-    background: #0e1f30;
-    padding: 28px 48px;
-  }
-  .footer-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 18px;
-    padding-bottom: 18px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-  }
-  .footer-brand {
-    font-size: 14px;
-    font-weight: 800;
-    color: #ffffff;
-    margin-bottom: 4px;
-  }
-  .footer-brand span {
-    color: #7ed9a8;
-  }
-  .footer-brand-sub {
-    font-size: 11.5px;
-    color: rgba(255,255,255,0.4);
-  }
-  .footer-contact {
-    text-align: right;
-    font-size: 12px;
-    color: rgba(255,255,255,0.5);
-    line-height: 1.8;
-  }
-  .footer-contact a {
-    color: #7ed9a8;
-    text-decoration: none;
-  }
-  .footer-bottom {
-    font-size: 11px;
-    color: rgba(255,255,255,0.28);
-    line-height: 1.7;
-    text-align: center;
-  }
-
-  @media (max-width: 600px) {
-    .email-wrapper { margin: 0; border-radius: 0; }
-    .header, .section, .feature-section, .scarcity-section,
-    .cta-section, .form-section, .footer { padding-left: 24px; padding-right: 24px; }
-    .header h1 { font-size: 24px; }
-    .cost-compare { flex-direction: column; }
-    .cost-vs { width: auto; padding: 8px 0; text-align: center; }
-    .footer-top { flex-direction: column; gap: 14px; }
-    .footer-contact { text-align: left; }
-  }
+@media(max-width:600px){
+  .wrap{margin:0;border-radius:0;}
+  .hd,.sec,.featsec,.scar,.cta,.formsec,.ft{padding-left:24px;padding-right:24px;}
+  .hd h1{font-size:24px;}
+  .costrow{flex-direction:column;}
+  .cvs{width:auto;padding:8px 0;text-align:center;}
+  .fttop{flex-direction:column;gap:14px;}
+  .ftcontact{text-align:left;}
+  .contact-box{width:100%;}
+}
 </style>
 </head>
 <body>
+<div class="wrap">
 
-<div class="email-wrapper">
+<!-- NOTICE -->
+<div class="notice">
+  초기 협업기업 <strong>150개사 한정</strong> &nbsp;·&nbsp; 5월 15일 정식 오픈 예정 &nbsp;·&nbsp; 마감 시 동일 조건 불가
+</div>
 
-  <!-- TOP BAR -->
-  <div class="notice-bar">
-    초기 협업기업 <strong>150개사 한정</strong> · 5월 15일 정식 오픈 예정 · 마감 시 동일 조건 불가
-  </div>
-
-  <!-- HEADER -->
-  <div class="header">
-    <div class="sender-info">
-      <div class="sender-logo">LF</div>
-      <div>
-        <div class="sender-name">라임프렌즈</div>
-        <div class="sender-sub">10년차 IT 기업 · 사회적경제 디지털 전환 파트너</div>
-      </div>
-    </div>
-    <div class="header-eyebrow">공식 안내</div>
-    <h1>
-      업무 플랫폼 두다(DODA),<br>
-      사회적경제 조직에<br>
-      <span class="accent">평생 무료</span>로 제공합니다.
-    </h1>
-    <p class="header-desc">
-      여러 유료 툴에 나가는 비용을 하나로 통합하고,<br>
-      초기 협업기업 150개사에 한해 영구 무료로 확정해 드립니다.
-    </p>
-  </div>
-
-  <!-- OPENING LETTER -->
-  <div class="section">
-    <p class="section-label">대표님께 드리는 안내</p>
-    <div class="letter-body">
-      <p>
-        안녕하세요. 라임프렌즈입니다.
-      </p>
-      <p>
-        현장에서 일하다 보면, 사회적경제 조직이 대기업과 같은 디지털 도구를 갖추기 어렵다는 현실을 반복해서 마주합니다.
-        카카오톡으로 업무 지시가 오가고, 고객 이력은 엑셀에 쌓이고, 문자·뉴스레터는 또 별도 서비스를 씁니다.
-        <strong>툴이 늘수록 비용과 혼선이 함께 늘어납니다.</strong>
-      </p>
-      <div class="em-text">
-        대기업은 이미 AI와 디지털 전환으로 업무 생산성을 크게 끌어올리고 있습니다.<br>
-        그 격차를 좁히기 위해, 라임프렌즈는 두다(DODA)를 <strong>사회적경제 전용 Non-Profit 모델</strong>로 개편했습니다.
-      </div>
-      <p>
-        Google이 비영리단체에 특별 요금제를 제공하듯, 두다도 사회적경제 조직이 지속 가능한 구조로 AI 전환을 시작할 수 있도록 설계했습니다.
-        정식 오픈(5월 15일) 전, 초기 협업기업 <strong>150개사에 한해</strong> 이 혜택을 평생 무료로 확정해 드립니다.
-      </p>
+<!-- HEADER -->
+<div class="hd">
+  <div class="sender">
+    <div class="logo">LF</div>
+    <div>
+      <div class="sname">라임프렌즈</div>
+      <div class="ssub">10년차 IT 기업 · 사회적경제 디지털 전환 파트너</div>
     </div>
   </div>
+  <div class="eyebrow">공식 안내</div>
+  <h1>업무 플랫폼 두다(DODA),<br>사회적경제 조직에<br><span class="ac">평생 무료</span>로 제공합니다.</h1>
+  <p class="hdesc">여러 유료 툴에 나가는 비용을 하나로 통합하고,<br>초기 협업기업 150개사에 한해 영구 무료로 확정해 드립니다.</p>
+</div>
 
-  <!-- COST COMPARISON -->
-  <div class="section">
-    <p class="section-label">비용 절감 효과</p>
-    <div class="cost-hero">
-      <div class="cost-hero-title">
-        📊 월 예상 비용 비교 (10인 기준)
+<!-- LETTER -->
+<div class="sec">
+  <p class="slabel">대표님께 드리는 안내</p>
+  <div class="letter">
+    <p>안녕하세요. 라임프렌즈입니다.</p>
+    <p>현장에서 일하다 보면, 사회적경제 조직이 대기업과 같은 디지털 도구를 갖추기 어렵다는 현실을 반복해서 마주합니다. 카카오톡으로 업무 지시가 오가고, 고객 이력은 엑셀에 쌓이고, 문자·뉴스레터는 또 별도 서비스를 씁니다. <strong>툴이 늘수록 비용과 혼선이 함께 늘어납니다.</strong></p>
+    <div class="embox">
+      대기업은 이미 AI와 디지털 전환으로 업무 생산성을 크게 끌어올리고 있습니다.<br>
+      그 격차를 좁히기 위해, 라임프렌즈는 두다(DODA)를 <strong>사회적경제 전용 Non-Profit 모델</strong>로 개편했습니다.
+    </div>
+    <p>Google이 비영리단체에 특별 요금제를 제공하듯, 두다도 사회적경제 조직이 지속 가능한 구조로 AI 전환을 시작할 수 있도록 설계했습니다. 정식 오픈(5월 15일) 전, 초기 협업기업 <strong>150개사에 한해</strong> 이 혜택을 평생 무료로 확정해 드립니다.</p>
+  </div>
+</div>
+
+<!-- COST -->
+<div class="sec">
+  <p class="slabel">비용 절감 효과</p>
+  <div class="costhero">
+    <div class="costtitle">📊 월 예상 비용 비교 (10인 기준)</div>
+    <div class="costrow">
+      <div class="ccol bef">
+        <div class="cclabel">현재 (분산 운영)</div>
+        <div class="ci"><span>그룹웨어/협업툴</span><span class="cp">3~8만원</span></div>
+        <div class="ci"><span>근태관리 앱</span><span class="cp">2~5만원</span></div>
+        <div class="ci"><span>CRM/고객관리</span><span class="cp">5~15만원</span></div>
+        <div class="ci"><span>문자/카카오 발송</span><span class="cp">3~10만원</span></div>
+        <div class="ci"><span>뉴스레터 툴</span><span class="cp">2~8만원</span></div>
+        <div class="ctotal"><span>월 합계</span><span>15~46만원+</span></div>
       </div>
-      <div class="cost-compare">
-        <div class="cost-col before">
-          <div class="cost-col-label">현재 (분산 운영)</div>
-          <div class="cost-item"><span>그룹웨어/협업툴</span><span class="price">3~8만원</span></div>
-          <div class="cost-item"><span>근태관리 앱</span><span class="price">2~5만원</span></div>
-          <div class="cost-item"><span>CRM/고객관리</span><span class="price">5~15만원</span></div>
-          <div class="cost-item"><span>문자/카카오 발송</span><span class="price">3~10만원</span></div>
-          <div class="cost-item"><span>뉴스레터 툴</span><span class="price">2~8만원</span></div>
-          <div class="cost-total"><span>월 합계</span><span>15~46만원+</span></div>
-        </div>
-        <div class="cost-vs">→</div>
-        <div class="cost-col after">
-          <div class="cost-col-label">두다(DODA) 도입 후</div>
-          <div class="cost-item"><span>그룹웨어/협업</span><span class="price">무료</span></div>
-          <div class="cost-item"><span>근태관리</span><span class="price">무료</span></div>
-          <div class="cost-item"><span>CRM/고객관리</span><span class="price">무료</span></div>
-          <div class="cost-item"><span>메시지 발송</span><span class="price">크레딧</span></div>
-          <div class="cost-item"><span>뉴스레터</span><span class="price">크레딧</span></div>
-          <div class="cost-total"><span>월 기본료</span><span>₩0</span></div>
-        </div>
-      </div>
-      <div class="cost-savings-note">
-        협업기업 참여 시 &nbsp;<span>연간 180만원~550만원 절감 가능</span>
+      <div class="cvs">→</div>
+      <div class="ccol aft">
+        <div class="cclabel">두다(DODA) 도입 후</div>
+        <div class="ci"><span>그룹웨어/협업</span><span class="cp">무료</span></div>
+        <div class="ci"><span>근태관리</span><span class="cp">무료</span></div>
+        <div class="ci"><span>CRM/고객관리</span><span class="cp">무료</span></div>
+        <div class="ci"><span>메시지 발송</span><span class="cp">크레딧</span></div>
+        <div class="ci"><span>뉴스레터</span><span class="cp">크레딧</span></div>
+        <div class="ctotal"><span>월 기본료</span><span>&#8361;0</span></div>
       </div>
     </div>
+    <div class="csave">협업기업 참여 시 &nbsp;<span>연간 180만원~550만원 절감 가능</span></div>
   </div>
+</div>
 
-  <!-- BENEFITS -->
-  <div class="section">
-    <p class="section-label">협업기업 혜택 안내</p>
-    <div class="benefit-list">
-
-      <div class="benefit-row highlighted">
-        <div class="benefit-num">1</div>
-        <div class="benefit-text">
-          <h4>두다(DODA) 평생 무료 확정 <span class="tag-free">LIFETIME FREE</span></h4>
-          <p>
-            지금 참여하시면 <strong>구성원 수에 관계없이 영구 무료</strong>로 확정됩니다.
-            정식 오픈 이후 요금제가 도입되더라도, 협업기업의 조건은 변경되지 않습니다.
-            (초기 협업기업 150개사 한정)
-          </p>
-        </div>
+<!-- BENEFITS -->
+<div class="sec">
+  <p class="slabel">협업기업 혜택 안내</p>
+  <div class="blist">
+    <div class="brow hi">
+      <div class="bnum">1</div>
+      <div class="btxt">
+        <h4>두다(DODA) 평생 무료 확정 <span class="tfree">LIFETIME FREE</span></h4>
+        <p>지금 참여하시면 <strong>구성원 수에 관계없이 영구 무료</strong>로 확정됩니다. 정식 오픈 이후 요금제가 도입되더라도, 협업기업의 조건은 변경되지 않습니다. (초기 협업기업 150개사 한정)</p>
       </div>
-
-      <div class="benefit-row">
-        <div class="benefit-num">2</div>
-        <div class="benefit-text">
-          <h4>AI 에이전트 기능 및 업데이트 지속 제공</h4>
-          <p>
-            두다는 단순 그룹웨어가 아닙니다. <strong>AI 에이전트 기반 업무 자동화</strong>까지 이어지는 플랫폼이며,
-            5월 15일 이후 고도화되는 AI 기능도 동일 조건으로 계속 제공됩니다.
-          </p>
-        </div>
-      </div>
-
-      <div class="benefit-row">
-        <div class="benefit-num">3</div>
-        <div class="benefit-text">
-          <h4>선결제 100만원 → 추후 전액 크레딧 전환</h4>
-          <p>
-            협업기업 참여 시 100만원을 선결제하시면, 지원사업 선정 후
-            <strong>결제금 전액을 크레딧으로 환원</strong>해 드립니다.
-            크레딧은 문자·카카오톡 알림·뉴스레터·AI 기능 등에 활용 가능합니다.
-          </p>
-        </div>
-      </div>
-
-      <div class="benefit-row">
-        <div class="benefit-num">4</div>
-        <div class="benefit-text">
-          <h4>선착순 10개사 — 맞춤 도입 지원 제공</h4>
-          <p>
-            가장 먼저 신청하신 10개 기업에는 초기 정착이 빠르게 이루어지도록
-            <strong>1:1 맞춤 온보딩 지원</strong>을 직접 제공합니다.
-          </p>
-        </div>
-      </div>
-
     </div>
-  </div>
-
-  <!-- FEATURES -->
-  <div class="feature-section">
-    <p class="section-label">플랫폼 주요 기능</p>
-    <h2>두다(DODA)가 하나로 통합하는<br>4가지 업무 영역</h2>
-    <p class="sub">분산된 툴을 교체하고, 한 플랫폼에서 운영하세요.</p>
-    <div class="feature-rows">
-      <div class="feature-row">
-        <div class="feature-row-icon">💬</div>
-        <div class="feature-row-text">
-          <h4>그룹웨어 / 조직 내 협업</h4>
-          <p>대화 내용이 할 일(Task)로 자동 전환되어 담당자·기한이 명확히 관리됩니다. 중요한 지시가 메신저 속에 묻히지 않습니다.</p>
-        </div>
+    <div class="brow">
+      <div class="bnum">2</div>
+      <div class="btxt">
+        <h4>AI 에이전트 기능 및 업데이트 지속 제공 <span class="tfree" style="background:#1a5c8a;">크레딧</span></h4>
+        <p>두다는 단순 그룹웨어가 아닙니다. <strong>AI 에이전트 기반 업무 자동화</strong>까지 이어지는 플랫폼이며, AI 에이전트 사용량은 <strong>크레딧</strong>으로 차감됩니다. 5월 15일 이후 고도화되는 AI 기능도 동일 조건으로 계속 제공됩니다.</p>
       </div>
-      <div class="feature-row">
-        <div class="feature-row-icon">🕐</div>
-        <div class="feature-row-text">
-          <h4>출퇴근 / 근태 관리</h4>
-          <p>직원 출결과 근태 현황을 앱·웹에서 실시간으로 확인하고, 기록이 자동으로 누적되어 노무 관리 부담이 줄어듭니다.</p>
-        </div>
+    </div>
+    <div class="brow">
+      <div class="bnum">3</div>
+      <div class="btxt">
+        <h4>선결제 100만원 → 자부담 인정 후 전액 크레딧 전환</h4>
+        <p>이번 프로모션은 <strong>(예비)사회적기업 성숙기 지원사업</strong>과 함께 진행됩니다. 협업기업 참여 시 결제하신 100만원은 <strong>지원사업 자부담으로 인정</strong>되며, 지원사업 선정 이후 <strong>결제금 전액이 크레딧으로 전환</strong>됩니다. 전환된 크레딧은 문자·카카오톡 알림·뉴스레터·AI 에이전트 등 <strong>홍보 마케팅 비용으로 자유롭게 활용</strong>하실 수 있습니다.</p>
       </div>
-      <div class="feature-row">
-        <div class="feature-row-icon">👥</div>
-        <div class="feature-row-text">
-          <h4>고객 관리 (CRM)</h4>
-          <p>고객 문의와 이슈가 자동으로 후속 할 일과 연결됩니다. 재연락·자료 발송·응대 이력이 체계적으로 축적됩니다.</p>
-        </div>
-      </div>
-      <div class="feature-row">
-        <div class="feature-row-icon">📣</div>
-        <div class="feature-row-text">
-          <h4>메시지 / 뉴스레터 발송</h4>
-          <p>문자·카카오톡 알림·이메일 뉴스레터를 한 곳에서 운영합니다. AI 크레딧을 활용하면 콘텐츠 작성까지 효율화됩니다.</p>
-        </div>
+    </div>
+    <div class="brow">
+      <div class="bnum">4</div>
+      <div class="btxt">
+        <h4>선착순 10개사 — 맞춤 도입 지원 제공</h4>
+        <p>가장 먼저 신청하신 10개 기업에는 초기 정착이 빠르게 이루어지도록 <strong>1:1 맞춤 온보딩 지원</strong>을 직접 제공합니다.</p>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- SCARCITY -->
-  <div class="scarcity-section">
-    <div class="scarcity-top">
-      <div class="scarcity-title">⏳ 협업기업 모집 현황</div>
-      <div class="scarcity-count">약 109개사 참여 완료</div>
-    </div>
-    <div class="progress-bg">
-      <div class="progress-fill"></div>
-    </div>
-    <p class="scarcity-note">
-      전체 150개사 중 약 41자리가 남아 있습니다.
-      마감 이후에는 동일 조건(평생 무료·인원 무제한·AI 업데이트 포함)으로 제공이 어렵습니다.
-    </p>
-  </div>
-
-  <!-- CTA -->
-  <div class="cta-section">
-    <h3>지금 신청하시면<br>자리를 우선 확보해 드립니다.</h3>
-    <p>
-      복잡한 절차 없이, 아래 버튼을 눌러 이메일로 회신해 주시면 됩니다.<br>
-      바로 양식을 채우기 어려우시면 <strong>"참여 의사 있음"</strong> 한 마디만으로도<br>
-      협업기업 자리를 먼저 확보해 드립니다.
-    </p>
-    <a href="mailto:contact@limefriends.co.kr?subject=두다(DODA) 협업기업 참여 신청&body=참여 의사 있음. 이후 상세 정보 작성하여 재회신 드리겠습니다." class="cta-primary">
-      협업기업 참여 신청하기
-    </a>
-    <div class="cta-or">또는</div>
-    <p class="cta-simple">
-      궁금하신 점이 있으시면 <a href="mailto:contact@limefriends.co.kr">contact@limefriends.co.kr</a>로<br>
-      직접 문의해 주시면 담당자가 신속히 안내드리겠습니다.
-    </p>
-  </div>
-
-  <!-- FORM -->
-  <div class="form-section">
-    <h3>✅ 협업기업 정보 입력폼 (회신용)</h3>
-    <p class="form-note-top">
-      아래 양식을 작성하신 후 이 메일에 직접 회신해 주시면 신청이 완료됩니다.<br>
-      모르시는 항목은 <strong>"미정" 또는 "해당없음"</strong>으로 기재하셔도 됩니다.
-    </p>
-    <table class="reply-form">
-      <tr><th>기업명</th><td>&nbsp;</td></tr>
-      <tr><th>법인등록번호</th><td>&nbsp;</td></tr>
-      <tr><th>소재지</th><td>&nbsp;</td></tr>
-      <tr><th>사업자등록번호</th><td>&nbsp;</td></tr>
-      <tr><th>대표자명</th><td>&nbsp;</td></tr>
-      <tr><th>담당자명</th><td>&nbsp;</td></tr>
-      <tr><th>고용현황</th><td>　　　명</td></tr>
-      <tr><th>매출액</th><td>　　　천원</td></tr>
-      <tr><th>기업 유형</th><td>
-        □ 사회적기업<br>
-        □ 예비사회적기업<br>
-        □ 협동조합<br>
-        □ 사회적협동조합<br>
-        □ 마을기업<br>
-        □ 자활기업<br>
-        □ 소셜벤처
-      </td></tr>
-      <tr><th>사업내용</th><td>&nbsp;</td></tr>
-    </table>
-    <p class="form-submit-note">📮 이 메일에 직접 회신해 주시면 신청이 완료됩니다.</p>
-  </div>
-
-  <!-- FOOTER -->
-  <div class="footer">
-    <div class="footer-top">
-      <div>
-        <div class="footer-brand">라임프렌즈 <span>× DODA</span></div>
-        <div class="footer-brand-sub">10년차 IT 기업 · 사회적경제 디지털 전환 파트너</div>
-      </div>
-      <div class="footer-contact">
-        <a href="mailto:contact@limefriends.co.kr">contact@limefriends.co.kr</a><br>
-        두다(DODA) 공식 안내 이메일
+<!-- FEATURES -->
+<div class="featsec">
+  <p class="slabel">플랫폼 주요 기능</p>
+  <h2>두다(DODA)가 하나로 통합하는<br>4가지 업무 영역</h2>
+  <p class="fsub">분산된 툴을 교체하고, 한 플랫폼에서 운영하세요.</p>
+  <div class="frows">
+    <div class="frow">
+      <div class="ficon">💬</div>
+      <div class="ftxt">
+        <h4>그룹웨어 / 조직 내 협업</h4>
+        <p>대화 내용이 할 일(Task)로 자동 전환되어 담당자·기한이 명확히 관리됩니다. 중요한 지시가 메신저 속에 묻히지 않습니다.</p>
       </div>
     </div>
-    <div class="footer-bottom">
-      본 메일은 두다(DODA) 서비스 협업기업 모집 안내를 위해 발송되었습니다.<br>
-      수신을 원하지 않으시면 회신으로 알려주시면 즉시 처리해 드립니다.
+    <div class="frow">
+      <div class="ficon">🕐</div>
+      <div class="ftxt">
+        <h4>출퇴근 / 근태 관리</h4>
+        <p>직원 출결과 근태 현황을 앱·웹에서 실시간으로 확인하고, 기록이 자동으로 누적되어 노무 관리 부담이 줄어듭니다.</p>
+      </div>
+    </div>
+    <div class="frow">
+      <div class="ficon">👥</div>
+      <div class="ftxt">
+        <h4>고객 관리 (CRM)</h4>
+        <p>고객 문의와 이슈가 자동으로 후속 할 일과 연결됩니다. 재연락·자료 발송·응대 이력이 체계적으로 축적됩니다.</p>
+      </div>
+    </div>
+    <div class="frow">
+      <div class="ficon">📣</div>
+      <div class="ftxt">
+        <h4>메시지 / 뉴스레터 발송</h4>
+        <p>문자·카카오톡 알림·이메일 뉴스레터를 한 곳에서 운영합니다. AI 크레딧을 활용하면 콘텐츠 작성까지 효율화됩니다.</p>
+      </div>
     </div>
   </div>
+</div>
+
+<!-- SCARCITY -->
+<div class="scar">
+  <div class="scartop">
+    <div class="scartitle">&#9203; 협업기업 모집 현황</div>
+    <div class="scarcount">약 109개사 참여 완료</div>
+  </div>
+  <div class="pbg"><div class="pfill"></div></div>
+  <p class="scarnote">전체 150개사 중 약 41자리가 남아 있습니다. 마감 이후에는 동일 조건(평생 무료·인원 무제한·AI 업데이트 포함)으로 제공이 어렵습니다.</p>
+</div>
+
+<!-- CTA -->
+<div class="cta">
+  <h3>지금 신청하시면<br>자리를 우선 확보해 드립니다.</h3>
+  <p>복잡한 절차 없이, 아래 버튼을 눌러 신청해 주시면 됩니다.<br>바로 양식을 채우기 어려우시면 <strong>"참여 의사 있음"</strong> 한 마디만으로도<br>협업기업 자리를 먼저 확보해 드립니다.</p>
+  <a href="mailto:lime@limefriends.com?subject=두다(DODA) 협업기업 참여 신청&body=참여 의사 있음. 이후 상세 정보를 작성하여 재회신 드리겠습니다." class="ctabtn">
+    협업기업 참여 신청하기
+  </a>
+  <div class="ctaor">문의 채널</div>
+  <div class="contact-box">
+    <div class="contact-row">
+      <span>&#128231;</span>
+      <span>이메일 &nbsp;<a href="mailto:lime@limefriends.com">lime@limefriends.com</a></span>
+    </div>
+    <div class="contact-row">
+      <span>&#128172;</span>
+      <a href="https://pf.kakao.com/_tqxjsd/chat" target="_blank" class="kakao-btn">
+        &#128233; 카카오톡 채널로 문의하기
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- FORM -->
+<div class="formsec">
+  <h3>&#9989; 협업기업 정보 입력폼 (회신용)</h3>
+  <p class="formnote">아래 양식을 작성하신 후 이 메일에 직접 회신해 주시면 신청이 완료됩니다.<br>모르시는 항목은 <strong>"미정" 또는 "해당없음"</strong>으로 기재하셔도 됩니다.</p>
+  <table class="rf">
+    <tr><th>기업명</th><td>&nbsp;</td></tr>
+    <tr><th>법인등록번호</th><td>&nbsp;</td></tr>
+    <tr><th>소재지</th><td>&nbsp;</td></tr>
+    <tr><th>사업자등록번호</th><td>&nbsp;</td></tr>
+    <tr><th>대표자명</th><td>&nbsp;</td></tr>
+    <tr><th>담당자명</th><td>&nbsp;</td></tr>
+    <tr><th>고용현황</th><td>　　　명</td></tr>
+    <tr><th>매출액</th><td>　　　천원</td></tr>
+    <tr><th>기업 유형</th><td>&#9633; 사회적기업<br>&#9633; 예비사회적기업<br>&#9633; 협동조합<br>&#9633; 사회적협동조합<br>&#9633; 마을기업<br>&#9633; 자활기업<br>&#9633; 소셜벤처</td></tr>
+    <tr><th>사업내용</th><td>&nbsp;</td></tr>
+  </table>
+  <p class="fsubnote">&#128238; 이 메일에 직접 회신해 주시면 신청이 완료됩니다.</p>
+</div>
+
+<!-- FOOTER -->
+<div class="ft">
+  <div class="fttop">
+    <div>
+      <div class="ftbrand">라임프렌즈 <span>&#215; DODA</span></div>
+      <div class="ftbrandsub">10년차 IT 기업 · 사회적경제 디지털 전환 파트너</div>
+    </div>
+    <div class="ftcontact">
+      <a href="mailto:lime@limefriends.com">lime@limefriends.com</a><br>
+      <a href="https://pf.kakao.com/_tqxjsd/chat" target="_blank" class="kakao-ft">&#128233; 카카오톡 채널 문의</a><br>
+      <span style="font-size:11px;opacity:.6;">두다(DODA) 공식 안내</span>
+    </div>
+  </div>
+  <div class="ftbot">
+    본 메일은 두다(DODA) 서비스 협업기업 모집 안내를 위해 발송되었습니다.<br>
+    수신을 원하지 않으시면 회신으로 알려주시면 즉시 처리해 드립니다.
+  </div>
+</div>
 
 </div>
 </body>
